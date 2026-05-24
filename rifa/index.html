@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>Rifa Online</title>
+
+    <style>
+        body { font-family: Arial; padding: 20px; background: #f7f7f7; }
+        h1 { text-align: center; }
+        .numeros { display: grid; grid-template-columns: repeat(10, 1fr); gap: 10px; margin-top: 20px; }
+        .num {
+            padding: 10px;
+            text-align: center;
+            border-radius: 5px;
+            background: #d9ffd9;
+            cursor: pointer;
+            border: 1px solid #000;
+        }
+        .ocupado {
+            background: #ffb3b3 !important;
+            cursor: not-allowed;
+        }
+        #formulario { margin-top: 30px; }
+    </style>
+</head>
+<body>
+
+    <h1>Rifa Online</h1>
+
+    <div id="numeros" class="numeros"></div>
+
+    <h2>Comprar Número</h2>
+    <form id="formulario">
+        <label>Número elegido:</label><br>
+        <input type="number" id="numeroInput" readonly><br><br>
+
+        <label>Nombre:</label><br>
+        <input type="text" id="nombre"><br><br>
+
+        <label>Teléfono:</label><br>
+        <input type="text" id="telefono"><br><br>
+
+        <button type="submit">Reservar y pagar</button>
+    </form>
+
+    <!-- SUPABASE LIB -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+
+    <!-- TU ARCHIVO JS -->
+    <script src="supabase.js"></script>
+    <script src="app.js"></script>
+
+</body>
+</html>
